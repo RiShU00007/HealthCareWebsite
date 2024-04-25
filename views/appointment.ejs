@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="appoint.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-item">
+            <form action="/appointment" method="post">
+                <input type="text" name="name" id="name" placeholder="name" required> <br> <br>
+                <input type="email" name="email" id="email" placeholder="email" required> <br> <br>
+                <label for="date">Date: 
+                    <input type="date" name="date" id="date" min="" max="2024-12-31" required> <br> <br>
+                </label>
+                <label for="time"> Time: 
+                    <input type="time" name="time" id="time"  min="10:00" max="16:00" required> <br> <br>
+                </label>
+                <label for="service">Service:  
+                    <select name="service" id="service" required>
+                        <option value="General Check up">General Check up</option>
+                        <option value="Dermatologist">Dermatologist</option>
+                        <option value="Neurlogist">Neurlogist</option>
+                        <option value="CT Scan">CT Scan</option>
+                    </select>
+                </label> <br> <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

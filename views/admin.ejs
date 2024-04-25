@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        ul{
+            list-style: none;
+            width: 50%;
+        }
+
+        li{
+            border: 2px solid gray;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 7px;
+        }
+
+        hr{
+            height: 2px;
+            background-color: rgb(0, 188, 0);
+        }
+
+        .listDiv2{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .list-subitem4, .list-subitem5{
+            margin-left: 40px;
+        }
+        
+        .list-subitem3, .list-subitem4, .list-subitem5, h1{
+            color: rgb(90, 90, 90);
+        }
+
+        .list-subitem2{
+            margin-top: -15px;
+            color: rgb(85, 85, 85);
+        }
+
+        .list-subitem1{
+            font-size: xx-large;
+            color: rgb(0, 156, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Appointments</h1>
+    <ul>
+        <% appts.forEach(post => { %>
+          <li class="list-item">
+              <div class="listDiv1">
+                    <h2 class="list-subitem1"><%= post.name %></h2>
+                    <h3 class="list-subitem2"><%= post.email %></h3>
+                </div>
+                <div class="listDiv2">
+                    <h4 class="list-subitem3">Date: <%= post.date %></h4>
+                    <h4 class="list-subitem4">Time: <%= post.time %></h4>
+                    <h4 class="list-subitem5">Service: <%= post.service %></h4>
+                </div>
+                  <hr class="">
+          </li>
+          <% }); %>
+      </ul>
+</body>
+</html>
